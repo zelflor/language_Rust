@@ -1,0 +1,171 @@
+{
+  "title": "Rust — Les bases",
+  "description": "Variables, fonctions, conditions, collections et premiers concepts du langage.",
+  "questions": [
+    {
+      "question": "Quelle déclaration crée une variable modifiable de type entier 32 bits ?",
+      "options": [
+        "let score: i32 = 0;",
+        "let mut score: i32 = 0;",
+        "mut score: i32 = 0;",
+        "var score = 0i32;"
+      ],
+      "answer": 1,
+      "tip": "`let mut` déclare une liaison modifiable. L'annotation `: i32` précise son type."
+    },
+    {
+      "question": "Quelle est la différence entre `String` et `&str` ?",
+      "options": [
+        "Aucune différence",
+        "String est possédée, &str est une tranche empruntée",
+        "&str est toujours modifiable",
+        "String ne contient que des caractères ASCII"
+      ],
+      "answer": 1,
+      "tip": "`String` possède son contenu. `&str` est une référence vers une tranche de chaîne."
+    },
+    {
+      "question": "Que retourne cette fonction : `fn double(x: i32) -> i32 { x * 2 }` ?",
+      "options": [
+        "Une chaîne",
+        "Un booléen",
+        "Un entier i32",
+        "Rien"
+      ],
+      "answer": 2,
+      "tip": "Le type après `->` indique le type de retour. Ici, la dernière expression `x * 2` est retournée."
+    },
+    {
+      "question": "Quel est le rôle du mot-clé `mut` dans `let mut total = 10;` ?",
+      "options": [
+        "Il rend la variable publique",
+        "Il autorise la modification de la variable",
+        "Il fixe le type à usize",
+        "Il crée une constante"
+      ],
+      "answer": 1,
+      "tip": "Les liaisons Rust sont immuables par défaut. `mut` autorise leur modification."
+    },
+    {
+      "question": "Quelle expression est correcte pour une condition en Rust ?",
+      "options": [
+        "if x > 5 { ... }",
+        "if (x > 5) then { ... }",
+        "when x > 5 { ... }",
+        "if x > 5 then ..."
+      ],
+      "answer": 0,
+      "tip": "La condition `if` ne nécessite pas de parenthèses autour de l'expression booléenne."
+    },
+    {
+      "question": "Quelle boucle convient pour parcourir les éléments d'un vecteur sans les modifier ?",
+      "options": [
+        "loop x in vec",
+        "foreach vec",
+        "for x in &vec",
+        "while vec"
+      ],
+      "answer": 2,
+      "tip": "`for x in &vec` parcourt les éléments par référence partagée."
+    },
+    {
+      "question": "Que représente `Option<T>` ?",
+      "options": [
+        "Un résultat qui contient toujours une erreur",
+        "Une valeur éventuellement présente ou absente",
+        "Un nombre optionnel uniquement",
+        "Une collection triée"
+      ],
+      "answer": 1,
+      "tip": "`Option<T>` contient soit `Some(valeur)`, soit `None`."
+    },
+    {
+      "question": "Quelles variantes composent `Result<T, E>` ?",
+      "options": [
+        "Some et None",
+        "Ok et Err",
+        "True et False",
+        "Success et Failure"
+      ],
+      "answer": 1,
+      "tip": "`Ok(T)` représente le succès et `Err(E)` représente une erreur."
+    },
+    {
+      "question": "À quoi sert l'opérateur `?` dans une fonction qui retourne un `Result` ?",
+      "options": [
+        "À rendre une variable mutable",
+        "À propager une erreur si le résultat est Err",
+        "À convertir un entier en chaîne",
+        "À ignorer une erreur"
+      ],
+      "answer": 1,
+      "tip": "`?` renvoie immédiatement l'erreur au code appelant si l'expression vaut `Err`."
+    },
+    {
+      "question": "Quelle déclaration crée un vecteur contenant 1, 2 et 3 ?",
+      "options": [
+        "let v = [1, 2, 3];",
+        "let v = vec![1, 2, 3];",
+        "let v = Vector(1, 2, 3);",
+        "let v = Vec(1, 2, 3);"
+      ],
+      "answer": 1,
+      "tip": "`vec![...]` est la macro pratique pour créer un `Vec<T>`. `[ ... ]` crée plutôt un tableau de taille fixe."
+    },
+    {
+      "question": "Que garantit principalement le système d'ownership de Rust ?",
+      "options": [
+        "Que toutes les variables sont globales",
+        "La gestion de mémoire sans garbage collector et la prévention de nombreuses erreurs mémoire",
+        "Que le programme utilise toujours moins de RAM",
+        "Que les fonctions sont exécutées en parallèle"
+      ],
+      "answer": 1,
+      "tip": "Ownership, borrowing et lifetimes permettent de vérifier la sûreté mémoire à la compilation."
+    },
+    {
+      "question": "Quelle règle s'applique aux références mutables (`&mut T`) ?",
+      "options": [
+        "On peut en avoir plusieurs simultanément sur la même donnée",
+        "Elles peuvent toujours coexister avec des références partagées",
+        "Une référence mutable doit être exclusive pendant son emprunt",
+        "Elles copient automatiquement la donnée"
+      ],
+      "answer": 2,
+      "tip": "Un emprunt mutable est exclusif : pas d'autre emprunt actif incompatible au même moment."
+    },
+    {
+      "question": "Comment définit-on une structure avec deux champs `name` et `age` ?",
+      "options": [
+        "struct User { name: String, age: u8 }",
+        "class User(name, age)",
+        "type User = { name, age }",
+        "object User { name, age }"
+      ],
+      "answer": 0,
+      "tip": "Une `struct` déclare des champs typés entre accolades."
+    },
+    {
+      "question": "Quel bloc sert à définir des méthodes associées à une structure ?",
+      "options": [
+        "trait",
+        "impl",
+        "use",
+        "mod"
+      ],
+      "answer": 1,
+      "tip": "On place les méthodes dans un bloc `impl NomDuType { ... }`."
+    },
+    {
+      "question": "Quel est le rôle d'un `trait` ?",
+      "options": [
+        "Définir un comportement partagé que des types peuvent implémenter",
+        "Créer une variable constante",
+        "Remplacer le système de modules",
+        "Allouer un tableau"
+      ],
+      "answer": 0,
+      "tip": "Un trait décrit un ensemble de méthodes qu'un type peut implémenter."
+    }
+  ]
+}

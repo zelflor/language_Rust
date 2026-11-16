@@ -1,0 +1,116 @@
+{
+  "title": "Rust — Débutant",
+  "description": "Premiers pas : syntaxe, variables, types et affichage.",
+  "questions": [
+    {
+      "question": "Quel mot-clé utilise-t-on pour déclarer une variable en Rust ?",
+      "options": [
+        "var",
+        "let",
+        "define",
+        "new"
+      ],
+      "answer": 1,
+      "tip": "Une variable se déclare avec `let`."
+    },
+    {
+      "question": "Quelle fonction est le point d'entrée habituel d'un programme Rust ?",
+      "options": [
+        "start",
+        "run",
+        "main",
+        "init"
+      ],
+      "answer": 2,
+      "tip": "Un programme exécutable commence généralement dans `fn main()`."
+    },
+    {
+      "question": "Quelle macro affiche un message avec un saut de ligne ?",
+      "options": [
+        "print!",
+        "println!",
+        "display!",
+        "echo!"
+      ],
+      "answer": 1,
+      "tip": "`println!` affiche le texte puis ajoute un saut de ligne."
+    },
+    {
+      "question": "Quel signe termine généralement une instruction Rust ?",
+      "options": [
+        ";",
+        "!",
+        ":",
+        "."
+      ],
+      "answer": 0,
+      "tip": "Le point-virgule termine généralement une instruction."
+    },
+    {
+      "question": "Quelle valeur représente le booléen vrai ?",
+      "options": [
+        "yes",
+        "1",
+        "true",
+        "True"
+      ],
+      "answer": 2,
+      "tip": "Rust utilise les booléens `true` et `false` en minuscules."
+    },
+    {
+      "question": "Quel type représente un nombre entier signé classique sur 32 bits ?",
+      "options": [
+        "u32",
+        "i32",
+        "f32",
+        "str"
+      ],
+      "answer": 1,
+      "tip": "`i32` est un entier signé sur 32 bits. `u32` est non signé."
+    },
+    {
+      "question": "Comment écrit-on une chaîne de caractères possédée ?",
+      "options": [
+        "String",
+        "Text",
+        "str!",
+        "char"
+      ],
+      "answer": 0,
+      "tip": "`String` est un type de chaîne possédée et modifiable."
+    },
+    {
+      "question": "Quel mot-clé rend une variable modifiable ?",
+      "options": [
+        "change",
+        "var",
+        "mut",
+        "edit"
+      ],
+      "answer": 2,
+      "tip": "Par défaut, les variables sont immuables. Écris `let mut score = 0;` pour la rendre modifiable."
+    },
+    {
+      "question": "Quel mot-clé permet de déclarer une fonction ?",
+      "options": [
+        "function",
+        "fn",
+        "func",
+        "def"
+      ],
+      "answer": 1,
+      "tip": "Une fonction Rust commence par `fn`, par exemple `fn dire_bonjour() {}`."
+    },
+    {
+      "question": "Quelle syntaxe est correcte pour créer une variable entière ?",
+      "options": [
+        "let age = 20;",
+        "int age = 20;",
+        "age := 20;",
+        "var age: int = 20;"
+      ],
+      "answer": 0,
+      "tip": "Rust peut souvent déduire le type : `let age = 20;`."
+    }
+  ]
+}
